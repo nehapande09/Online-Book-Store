@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+<header>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" {{url_for ('static',filename='css/style.css' ) }}">
+    <div class="about">
+        <img src="{{url_for ('static',filename='img/about.jpg')}}" alt="about">
+
+        <p>About Us</p>
+    </div>
+</header>
+
+<body>
+
+    <div class="about_content">
+        <h4> <b>"Books are a uniquely portable magic"</b></h4>
+        <h5> <b> Dear Readers,</b></h5>
+        <p>
+            We offer a tremendous gathering of books in the various classifications of Fiction, Non-fiction. We likewise
+            move in immense accumulation of Investments and Management, Computers, Engineering, Medical, College and
+            School content references books proposed by various foundations as schedule the nation over. </p>
+        <p>
+            We endeavor to broaden consumer loyalty by providing food simple easy using web indexes, brisk and
+            easy-to-understand installment alternatives, and snappier conveyance frameworks. Upside to the majority of
+            this, we are arranged to give energizing offers and charming limits on our books.</p>
+        <p>
+            Too, we modestly welcome every one of the merchants around the nation to band together with us. We will
+            without a doubt give you the stage to many shimmering areas and develop the “Organization Name” family. We
+            might want to thank you for shopping with us. You can keep in touch with us for any new musings at
+            “<a href="readerscafe.8926@gmail.com">readerscafe.8926@gmail.com</a>” or visiting contact us page in our website helping us to ad-lib for the peruser
+            fulfillment.</p>
+    </div>
+    {% endblock %}
+</body>

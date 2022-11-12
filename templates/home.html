@@ -1,0 +1,202 @@
+{% extends "layout.html" %}
+{% block body %}
+<header>
+  <form class="search" method="post" action="/search">
+    <input class="formcontrol" type="search" name="search" placeholder="Search" aria-label="Search"
+      style="height: 35px; width:500px;">
+    <button class="btn" type="submit" style="height:35px" padding-inline="60px">Search</button>
+
+  </form>
+  <div class="home">
+    <img src="{{url_for ('static',filename='img/home.jpeg' )}}" alt="home-img">
+  </div>
+  <div class="heading_home">
+    <p>Readers Cafe</p>
+  </div>
+  <div class="quote">
+    <p>A Journey Through The World Of Books</p>
+  </div>
+</header>
+
+<body>
+  <br>
+<h1 style="text-align:center; font: size 5px;"><span style="color:black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;">Now </span>
+<span style="color:rgb(168, 28, 28) ;font-family: Cursive,	;"><i>Trending</i> </span></h1><br>
+<!-- Trendings -->
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="cards-wrapper">
+        <div class="card" style="width: 18rem;">
+          
+         <div class="image-wrapper">
+          <img src="static/img/books/who will cry after you die.jpg"  alt="...">
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">Who Will Cry When You Die</h5>
+            <p class="card-text">Does the gem of wisdom quoted above strike...</p>
+            <a href="/readmore/42" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        
+        <div class="card" style="width: 18rem;">
+          <div class="image-wrapper">
+          <img src="static/img/books/everything happens for a image.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Everything Happens For A Reason</h5>
+            <p class="card-text">Kate Bowler is a professor at Duke Divinity School..</p>
+            <a href="/readmore/34" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="image-wrapper">
+          <img src="static/img/books/a girl with no dreams.jpg" class="card-img-top" alt="...">
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">A Girl With No Dream</h5>
+            <p class="card-text">I always asked mom about my father but she always ..</p>
+            <a href="/readmore/35" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card" style="width: 18rem;">          
+          <div class="image-wrapper">
+          <img src="static/img/books/a thing beyond forever.webp" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">A Thing Beyond Forever</h5>
+            <p class="card-text">Some love stories are soul stories.Dr. Radhika Sha...</p>
+            <a href="/readmore/36" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="image-wrapper">
+          <img src="static/img/books/all i ever want is you.jpg" class="card-img-top" alt="...">
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">All I Ever Want Is You</h5>
+            <p class="card-text">Raj and Alisha meet at a family party and fall for...</p>
+            <a href="/readmore/37" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="image-wrapper">
+          <img src="static/img/books/the sound of silence.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">The Sound Of silence</h5>
+            <p class="card-text">"Do you have a favorite sound?" little Yoshio asks.</p>
+            <a href="/readmore/38" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+
+      </div>
+    
+    </div>
+    <div class="carousel-item justify-content-center">
+      <div class="cards-wrapper">
+        <div class="card" style="width: 18rem;">
+          <div class="image-wrapper">
+          <img src="static/img/books/you only live once.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">You Only Live Once</h5>
+            <p class="card-text">Find the answers about your own life in this story...</p>
+            <a href="/readmore/39" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="image-wrapper">
+          <img src="static/img/books/a touch of eternity.jpg" class="card-img-top" alt="...">
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">A Touch Of eternity</h5>
+            <p class="card-text">Born on the same day and at the same time, Druvan ...</p>
+            <a href="/readmore/40" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="image-wrapper">
+          <img src="static/img/books/the mother i never knew.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">The Mother I never knew</h5>
+            <p class="card-text">Yet another book from the treasure trove of Sudha ...</p>
+            <a href="/readmore/43" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>  
+  <button class="prev_button"  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="next_button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+  <!--Best Sellers Book-->
+  <div class="Bestseller">
+    <h1>Bestseller:</h1>
+    {% for book in books %}
+    {% if book.category=='bestseller' %}
+    <div class="cards">
+      <div class="image">
+        <img src="static/img/books/{{ book.img_name }}" alt="Book">
+      </div>
+      <div class="title">
+        <h3>{{book.name}}</h3>
+      </div>
+      <h4>Price:{{book.price}}</h4>
+      <div class="description">
+        <p>{{book.description[0:70] }}...</p>
+        <button><a href="{{ url_for('readmore',id=book.book_id) }}" style="text-decoration: none; color: black;"> Read More..</a></button>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <!--New Releases Book-->
+  <div class="new_releases">
+    <h1>New Releases:</h1>
+    {% for book in books %}
+    {% if book.category=='newreleases' %}
+
+    <div class="cards">
+      <div class="image">
+        <img src="static/img/books/{{ book.img_name }}"  alt="Book">
+ 
+      </div>
+      <div class="title">
+        <h3>{{book.name}}</h3>
+      </div>
+      <h4>Price:{{book.price}}</h4>
+      <div class="description">
+        <p>{{book.description[0:70] }}...</p>
+        <button><a href="{{ url_for('readmore',id=book.book_id) }}" style="text-decoration: none; color: black;"> Read More..</a></button>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+</body>
+
+{% endblock %}

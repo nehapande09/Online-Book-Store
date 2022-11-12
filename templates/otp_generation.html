@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<body>
+    <div class="pic">
+        <img src="{{url_for ('static',filename='img/login.jpg')}}" alt="login">
+        <div class="container">
+            <div class="resetpass">
+                <h3>OTP Generation</h3>
+                <form action="/otp_generation" method="post">
+                    <label for="otp">
+                        OTP
+                    </label><br>
+                    <input type="number" name="otp" class="shape" placeholder="Enter OTP here">
+                    <br><br>
+                    <label for="password">
+                        Password
+                    </label><br><br>
+                    <input type="password" name="password" class="shape" placeholder="  Enter Your Password">
+                    <br><br>
+                    <label for="Confirm_password">
+                        Confirm Password
+                    </label><br><br>
+                    <input type="password" name="confirm_password" class="shape"
+                        placeholder="Enter Your Password Again">
+                    <br><br><br>
+                    <button class="login-btn">Submit</button>
+                    {% for message in get_flashed_messages() %}
+                    <div class="alert alert-success" role="alert">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

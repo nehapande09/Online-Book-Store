@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<body>
+    <div class="chechout_bg">
+        <div class="container_check">
+            <div class="left_check">
+                <h3>BILLING ADDRESS</h3>
+                <form action="/checkout" method="post">
+                    Full name
+                    <input type="text" name="name" placeholder="Enter Name" required>
+                    Email
+                    <input type="text" name="email" placeholder="Enter Email" required>
+                    Address
+                    <input type="text" name="address" placeholder="Enter Address" required>
+                    City
+                    <input type="text" name="city" placeholder="Enter City" required>
+
+
+            </div>
+            <div class="right_check">
+
+                <br>
+                <div id="label1">
+                    <label>
+                        <p> State</p>
+                        <select>
+                            <option>Choose State</option>
+                            <option>Maharashtra</option>
+                            <option>Gujarat</option>
+                            <option>Andhrapradesh</option>
+                            <option>Tamilnadu</option>
+                            <option>Kerala</option>
+                            <option>Karnataka</option>
+                            <option>Punjab</option>
+                            <option>Bengol</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p> Zip code</p>
+                        <input type="number" name="" placeholder="ZipCode">
+                    </label>
+                </div>
+
+                <br><br>
+                <h3>PAYMENT</h3>
+                <br>
+                <input type="radio" id="rd1" name="" value="" required>
+                <label for="html">Cash On Delivery</label>
+                <br><br>
+                <button   name="ok" class="ok">OK</button>
+            </div>
+            {% for message in get_flashed_messages() %}
+            
+            <script>
+            console.log("hii",{{message}})
+
+                alert("{{ message }}")
+            </script>
+
+            {% endfor %}
+
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+{% endblock %}
+
+</html>

@@ -1,0 +1,40 @@
+{% extends"layout.html" %}
+{% block body %}
+<body>
+    <div class="cart_back">
+        <div class="cart-box">
+            <h1>Shopping Cart</h1>
+            <div class="project">
+                <div class="shop">
+                    {% for book in books %}
+                    <div class="box">
+                        <img src="http://127.0.0.1:5000/static/img/books/{{ book.img_name }}" alt="book cover">
+                        <div class="content_cart">
+                            <h5> {{book.name}}</h5>
+                            <h6>Price:{{book.price}} </h6>
+                            <p class="unit"><b>Quantity:</b><input  value="1"></p>
+                            <p class="btn_cart">
+
+                                <button class="btn_remove"><a href="/removecart/{{book.book_id}}" style="color: black;">Remove</a></button>
+                            </p>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+                <div class="right_bar">
+                    <p><b>Subtotal:</b>{{total_price}} Rs</p>
+                    <hr>
+                    <p><b>Shipping:</b>25 Rs</p>
+                    <hr>
+                    <p><b>Total=</b>{{ total_price+25 }} Rs</p>
+                    <a href="/checkout"><i class="shopping-cart"></i>Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+{% endblock %}
+
+</html>

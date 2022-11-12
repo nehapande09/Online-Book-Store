@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+</script>
+<body>
+        <div class="pic">
+            <img src="{{url_for ('static',filename='img/login.jpg')}}" alt="login">
+            <div class="container">
+                <div class="signup">
+                    <h3>Create A New Account</h3>
+                    <form action="{{ url_for('signup') }}" method="post">
+                        <label for="name">
+                            Name
+                        </label><br>
+                        <input type="text" class="shape" name="username" placeholder="  Enter Your Name">
+                        <br><br><br>
+                        <label for="email">
+                            Email
+                        </label><br>
+                        <input type="email" class="shape" name="email" placeholder="  Enter Your Email">
+                        <br><br><br>
+                        <label for="password">
+                            Password
+                        </label><br>
+                        <input type="password" class="shape" name="password" placeholder="  Enter Your Password">
+                        <br><br><br>
+                        <button class="login-btn" id="submit" name="submit">Submit</button>
+                        {% for message in get_flashed_messages() %}
+                        <div class="alert alert-primary" role="alert">
+                            
+                            {{ message }}
+                           
+                        </div>
+                        {% endfor %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+{% endblock %}

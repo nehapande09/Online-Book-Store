@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+<div class="cont_container">
+    <div class="contact">
+        <img src="{{url_for ('static',filename='img/contact.jpeg' )}}" alt="contact-img">
+        <p> Contact Us </p>
+    </div>
+    <br>
+    <br>
+    <form name="sentmessage" id="contactform" action="/contact" method="post" novalidate>
+
+        <label class="lbl" for="fname">
+            Name
+        </label> <br> <br>
+        <input class="textarea" type=" text" id="fname" name="name" placeholder="Your name..">
+        <br><br>
+
+        <label class="lbl" for="lname">
+            Phone Number
+        </label>
+        <br><br>
+        <input class="textarea" type="number" id="phone" name="phone" placeholder="Enter Phone number">
+        <br><br>
+
+        <label class="lbl" for="lname">
+            Email ID
+        </label>
+        <br><br>
+        <input class="textarea" type="email" id="email" name="email" placeholder="Enter email id..">
+        <br><br>
+
+        <label class="lbl" for="subject">
+            Message
+        </label>
+        <br>
+        <br>
+        <textarea class="textarea" id="subject" name="message" placeholder="Write something.."
+            style="height:200px"></textarea>
+        <br> <br>
+        <button class="s-btn" name="Submit" type="submit" value="Submit"> Submit </button>
+        <button class="s-btn1" name="Cancel" type="reset" "Cancel"> Cancel </button>
+        <br>
+        <br>
+        <br>
+        {% for message in get_flashed_messages() %}
+        <script>
+
+            alert("{{ message }}")
+        </script>
+        
+        {% endfor %}
+        
+    </form>
+</div>
+</body>
+{% endblock %}

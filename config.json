@@ -1,0 +1,15 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://root:@localhost/readers_cafe",
+    "prod_uri":"mysql://root:@localhost/readers_cafe",
+    "fb_url":"https://facebook.com/reder",
+    "tw_url":"https://twitter.com/readerscafe",
+    "gh_url": "https://github.com/readerscafe",
+    "blog_name": "Readers cafe",
+    "tag_line": "Heaven for programmers",
+    "gmail_user":"readerscafe.8926@gmail.com",
+    "gmail-password":"cmmdiabzccvoighd\n"
+  }
+}

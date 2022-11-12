@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+    <div class="readmore">
+        <div class="card_container">
+            
+            <div class="left_card">
+                <img src="http://127.0.0.1:5000/static/img/books/{{ book.img_name }}" alt="Book">   
+            </div>
+            <div class="right_card">
+                <p>
+                <h3>{{ book.name }} </h3>
+                </p>
+                <div class="descript">
+                    <p>   {{ book.description [0:500]}}</p>
+                </div>
+
+                <p><b>Author:</b>
+                      {{ book.author_name }}
+                </p>
+                <p>
+                    <b>Price: </b>
+                    {{ book.price }}
+                </p>
+                <p>
+                    <b>Language:</b>
+                       {{ book.language }}
+                </p>
+                <p>
+                    <b>Pages:</b>
+                     {{ book.pages }}
+                </p>
+                <p>
+                    <b>Type:</b>
+                    {{ book.type }}
+                    
+                </p>
+                <button class="addcart" name="addcart"><a href="/addcart/{{ book.book_id }}" style="text-decoration: none; color: black;">Add To Cart</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
+
+</html>

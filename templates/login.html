@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+    <form action="/login" method="post">
+        <div class="pic">
+            <img src="{{url_for ('static',filename='img/login.jpg')}}" alt="login">
+            <div class="container">
+                <div class="login">
+                    <h1>Login</h1>
+                    <form action="{{ url_for('login') }}" method="post">
+                        <label for="email">
+                            Email
+                        </label><br>
+                        <input type="text" class="shape" name="email" placeholder="  Enter Your Email">
+                        <br><br>
+                        <label for="Password">
+                            Password
+                        </label><br>
+                        <input type="password" class="shape" name="password" placeholder="  Enter valid password"  > 
+                        <div class="msg">{{ msg }}</div>
+                        <br><br>
+                        <button class="login-btn" name="login">Login</button>
+                        {% for message in get_flashed_messages() %}
+                        <div class="alert alert-primary" role="alert">   
+                            {{ message }} 
+                        </div>
+                        {% endfor %}
+                        <p> New here then create account? </p>
+                        <button class="signup-btn"><a href="signup" style="color: black;">Sign Up</a></button>
+                        <p> <a href="/getotp" style="color:rgb(255, 250, 250)">Forgot Password ?</a></p>
+                        <br>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}
+</body>
